@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>An Nam Hub - Cyberpunk Launcher</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- HEADER LAUNCHER BAR -->
+  <header class="cyber-glass sticky top-0 z-50 border-b border-cyan-500/20 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center">
+      <a href="#/index" class="flex items-center space-x-3 text-xl font-extrabold text-cyan-400 tracking-wider">
+        <i class="fa-solid fa-terminal text-2xl animate-pulse text-cyan-400"></i>
+        <span class="bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">AN NAM HUB</span>
+      </a>
+
+      <nav class="flex items-center space-x-1 sm:space-x-3 text-sm font-medium">
+        <a id="nav-index" href="#/index" class="nav-btn px-3 py-2 rounded-lg">Trang Chủ</a>
+        <a id="nav-post" href="#/post" class="nav-btn px-3 py-2 rounded-lg"><i class="fa-solid fa-newspaper mr-1"></i>Bài Viết</a>
+        <a id="nav-game" href="#/game" class="nav-btn px-3 py-2 rounded-lg"><i class="fa-solid fa-gamepad mr-1"></i>Game & Tools</a>
+        <a id="nav-blog" href="#/blog" class="nav-btn px-3 py-2 rounded-lg"><i class="fa-solid fa-pen-nib mr-1"></i>Blog</a>
+        <a id="nav-support" href="#/support" class="nav-btn px-3 py-2 rounded-lg"><i class="fa-solid fa-headset mr-1"></i>Hỗ Trợ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="flex-grow max-w-7xl w-full mx-auto p-4 sm:p-6">
+    
+    <!-- INDEX VIEW -->
+    <section id="view-index" class="page-view hidden space-y-6">
+      <div class="cyber-hero rounded-2xl p-8 text-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-cyan-500/5 backdrop-blur-sm pointer-events-none"></div>
+        <div class="relative z-10 space-y-3">
+          <span class="px-3 py-1 text-xs font-bold uppercase tracking-widest bg-cyan-500/20 text-cyan-400 rounded-full border border-cyan-500/40">SYSTEM ONLINE v3.0</span>
+          <h1 class="text-3xl sm:text-5xl font-black tracking-tight text-white">Kho Tải Game & Phần Mềm An Nam</h1>
+          <p class="text-slate-400 text-sm sm:text-base max-w-2xl mx-auto">Nền tảng chia sẻ tài nguyên tốc độ cao, bảo mật mã hóa chống quét bot.</p>
+        </div>
+      </div>
+      <h2 class="text-xl font-bold border-l-4 border-cyan-400 pl-3 text-cyan-300">Nội Dung Mới Cập Nhật</h2>
+      <div id="index-latest-list" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+    </section>
+
+    <!-- POST VIEW -->
+    <section id="view-post" class="page-view hidden space-y-4">
+      <h1 class="text-2xl font-bold text-cyan-400"><i class="fa-solid fa-newspaper mr-2"></i>Chuyên Mục: Bài Viết</h1>
+      <div id="list-post" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+    </section>
+
+    <!-- GAME VIEW -->
+    <section id="view-game" class="page-view hidden space-y-4">
+      <h1 class="text-2xl font-bold text-pink-400"><i class="fa-solid fa-gamepad mr-2"></i>Chuyên Mục: Game & Tools</h1>
+      <div id="list-game" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+    </section>
+
+    <!-- BLOG VIEW -->
+    <section id="view-blog" class="page-view hidden space-y-4">
+      <h1 class="text-2xl font-bold text-yellow-400"><i class="fa-solid fa-pen-nib mr-2"></i>Chuyên Mục: Blog</h1>
+      <div id="list-blog" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+    </section>
+
+    <!-- SUPPORT VIEW -->
+    <section id="view-support" class="page-view hidden space-y-4">
+      <h1 class="text-2xl font-bold text-emerald-400"><i class="fa-solid fa-headset mr-2"></i>Hỗ Trợ & Hướng Dẫn</h1>
+      <div id="list-support" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+    </section>
+  </main>
+
+  <footer class="cyber-glass mt-auto py-4 text-center text-xs text-slate-400 border-t border-cyan-500/20">
+    An Nam Hub &copy; 2026 - Cyberpunk Launcher System
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>q
